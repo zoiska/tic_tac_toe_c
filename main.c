@@ -10,6 +10,5 @@ int main() {
 
     gamemode(box);
 
-    free(box);
     return 0;
 }

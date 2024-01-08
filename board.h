@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
 
 #ifndef BOARD_H
 #define BOARD_H
