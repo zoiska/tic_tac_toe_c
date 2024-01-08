@@ -11,6 +11,7 @@ void print_Board(){
 }
 
 void print_Current(char array[]){
+    printf("\n\n");
     printf(" %c | %c | %c \n", array[0], array[1], array[2]);
     printf("-----------\n");
     printf(" %c | %c | %c \n", array[3], array[4], array[5]);
