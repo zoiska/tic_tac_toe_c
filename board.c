@@ -1,13 +1,13 @@
 #include "board.h"
 
 void print_Board(){
-    printf("Spieler 1 <X>  -  Spieler 2 <O>\n\n");
+    printf("\n\nSpieler 1 <X>  -  Spieler 2 <O>\n\n");
     printf(" 1 | 2 | 3 \n");
     printf("-----------\n");
     printf(" 4 | 5 | 6 \n");
     printf("-----------\n");
     printf(" 7 | 8 | 9 \n");
-    printf("Gib die Zahl des Feldes ein in das du platzieren moechtest.\n\n");
+    printf("Gib die Zahl des Feldes ein in das du platzieren moechtest.\n");
 }
 
 void print_Current(char array[]){

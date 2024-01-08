@@ -5,4 +5,6 @@ set(CMAKE_C_STANDARD 11)
 
 add_executable(tic_tac_toe_c main.c
         board.c
-        board.h)
+        board.h
+        logic.c
+        logic.h)

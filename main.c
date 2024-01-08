@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include "board.h"
+#include "logic.h"
 
 int main() {
     char *box = malloc(9 * sizeof(char));
@@ -7,8 +8,7 @@ int main() {
         box[i] = '_';
     };
 
-    print_Board();
-    print_Current(box);
+    gamemode(box);
 
     free(box);
     return 0;
