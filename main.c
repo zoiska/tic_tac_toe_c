@@ -1,6 +1,6 @@
 #include <stdlib.h>
-#include "board.h"
-#include "logic.h"
+#include "Board/board.h"
+#include "Logic/logic.h"
 
 int main() {
     char *box = malloc(9 * sizeof(char));

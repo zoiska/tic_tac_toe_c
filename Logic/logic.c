@@ -1,7 +1,5 @@
 #include "logic.h"
 
-#define MAX_RAND 8
-
 void gamemode(char *box){
     int gm;
     printf("Eingabe <1> fuer zwei Spieler, Eingabe <2> fuer Einzelspieler.\n");
@@ -28,7 +26,6 @@ void ein_Spieler(char *box){
     eing_x(box);
     o_Random(box);
     eing_x(box);
-    printf("Unentschieden!");
 }
 
 void zwei_Spieler(char *box){
@@ -42,7 +39,6 @@ void zwei_Spieler(char *box){
     eing_x(box);
     eing_o(box);
     eing_x(box);
-    printf("Unentschieden!\n\n");
 }
 
 void eing_x(char *box){
@@ -76,34 +72,31 @@ void eing_o(char *box){
 }
 
 void o_Random(char *box){
-    //srand(time(NULL));
-    //int r = rand() % MAX_RAND;
-    //if(box[r] != '_'){
-        for(int i = 0; i <= 8; i++){
-            if(box[i] == '_'){
-                box[i] = 'O';print_Current(box);
-                check_Win(box, 'O');
-                break;
-            }
+    for(int i = 0; i <= 8; i++){
+        if(box[i] == '_'){
+            box[i] = 'O';print_Current(box);
+            check_Win(box, 'O');
+            break;
         }
-    //}
-    //else {
-    //    box[r] = 'O';
-    //    print_Current(box);
-    //    check_Win(box, 'O');
-    //}
+    }
 }
 
 void check_Win(char *box, char player){
-    if(box[0] == player && box[1] == player && box[2] == player
-    || box[3] == player && box[4] == player && box[5] == player
-    || box[6] == player && box[7] == player && box[8] == player
-    || box[0] == player && box[3] == player && box[6] == player
-    || box[1] == player && box[4] == player && box[7] == player
-    || box[2] == player && box[5] == player && box[8] == player
-    || box[0] == player && box[4] == player && box[8] == player
-    || box[2] == player && box[4] == player && box[6] == player){
+    if((box[0] == player && box[1] == player && box[2] == player)
+        || (box[3] == player && box[4] == player && box[5] == player)
+        || (box[6] == player && box[7] == player && box[8] == player)
+        || (box[0] == player && box[3] == player && box[6] == player)
+        || (box[1] == player && box[4] == player && box[7] == player)
+        || (box[2] == player && box[5] == player && box[8] == player)
+        || (box[0] == player && box[4] == player && box[8] == player)
+        || (box[2] == player && box[4] == player && box[6] == player)){
         printf("Spieler <%c> hat gewonnen!\n\n", player);
-        exit(0);
+        //call player win
+        //call player lose
+    }
+    else if(box[0] != '_' && box[1] != '_' && box[2] != '_' && box[3] != '_'&& box[4] != '_'
+        && box[5] != '_' && box[6] == '_' && box[7] != '_' && box[8] != '_') {
+        printf("Unentschieden!\n");
+        //call unentscheiden
     }
 }
