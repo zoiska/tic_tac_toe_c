@@ -8,7 +8,7 @@ int main() {
         box[i] = '_';
     };
 
-    gamemode(box);
+    zwei_Spieler(box);
 
     return 0;
 }
