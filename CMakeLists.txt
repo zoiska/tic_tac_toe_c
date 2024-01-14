@@ -7,4 +7,7 @@ add_executable(tic_tac_toe_c main.c
         Board/board.c
         Board/board.h
         Logic/logic.c
-        Logic/logic.h)
+        Logic/logic.h
+        outputsheet/output.c
+        outputsheet/output.h
+)

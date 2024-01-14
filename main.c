@@ -8,6 +8,8 @@ int main() {
         box[i] = '_';
     };
 
+    remove("../outputsheet/games");
+
     zwei_Spieler(box);
 
     return 0;

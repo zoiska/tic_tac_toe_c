@@ -1,6 +1,7 @@
 #include "../Board/board.h"
+#include "../outputsheet/output.h"
+
 #include <stdlib.h>
-#include <time.h>
 
 #ifndef LOGIC_H
 #define LOGIC_H
