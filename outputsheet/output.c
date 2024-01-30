@@ -1,6 +1,5 @@
 #include "output.h"
 
-
 void write_output(char array[], char player) {
     FILE *myFile = fopen("../outputsheet/games", "a");
     fprintf(myFile, "Zug von Spieler <%c>\n", player);
